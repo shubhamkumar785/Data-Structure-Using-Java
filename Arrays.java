@@ -176,21 +176,63 @@
 
 // search an element
 // using linear search
-public class Arrays {
-    public static boolean search(int[] arr, int target) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == target) {
-                return true;
-            }
-        }
-        return false;
+// public class Arrays {
+//     public static boolean search(int[] arr, int target) {
+//         for (int i = 0; i < arr.length; i++) {
+//             if (arr[i] == target) {
+//                 return true;
+//             }
+//         }
+//         return false;
 
-    }
+//     }
 
-    public static void main(String[] args) {
-        int[] arr = { 60, 80, 30, 90, 50, 40 };
-        int target = 50;
-        boolean result = search(arr, target);
-        System.out.println(result);
-    }
-}
+//     public static void main(String[] args) {
+//         int[] arr = { 60, 80, 30, 90, 50, 40 };
+//         int target = 50;
+//         boolean result = search(arr, target);
+//         System.out.println(result);
+//     }
+// }
+
+
+
+
+// product of array
+
+// public class Arrays {
+//     public static long productArray(int[] arr) {
+//         long product = 1;
+//         for (int i = 0; i < arr.length; i++) {
+//             product *= arr[i];
+//         }
+//         return product;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 1, 2, 3, 4, 5, 6 };
+//         System.out.print(productArray(arr));
+//     }
+// }
+
+//Two Sum 
+
+// public class Arrays {
+//     public static int[] TwoSum(int[] arr, int target) {
+//         for (int i = 0; i < arr.length; i++) {
+//             for (int j = i + 1; j < arr.length; j++) {
+//                 if (arr[i] + arr[j] == target) {
+//                     return new int[] { i, j };
+//                 }
+//             }
+//         }
+//         return new int[] { -1, -1 };
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 1, 5, 8, -3 };
+//         int target = 3;
+//         int[] result = TwoSum(arr, target);
+//         System.out.println("Indexes: " + result[0] + ", " + result[1]);
+//     }
+// }
