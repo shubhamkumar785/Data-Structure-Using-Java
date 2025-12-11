@@ -297,3 +297,57 @@
 
 
 
+// Reverse an array 
+
+// public class Arrays {
+//     public static void reverse(int[] arr) {
+//         int n = arr.length - 1;
+//         int left = 0;
+//         int right = n;
+
+//         while (left <= right) {
+//             int temp = arr[left];
+//             arr[left] = arr[right];
+//             arr[right] = temp;
+
+//             left++;
+//             right--;
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 10, 20, 30, 40, 50, 80, 70 };
+//         reverse(arr);
+
+//         for (int num : arr) {
+//             System.out.print(num + " ");
+//         }
+//     }
+// }
+
+// reverse only specific parts outcome - 10, 20, 30, 60, 50, 40, 70;
+
+// public class Arrays {
+//     public static void reverse(int[] arr) {
+//         int i = 3;
+//         int j = 5;
+
+//         while (i <= j) {
+//             int temp = arr[i];
+//             arr[i] = arr[j];
+//             arr[j] = temp;
+//             i++;
+//             j--;
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 10, 20, 30, 40, 50, 60, 70 };
+//         reverse(arr);
+
+//         for (int num : arr) {
+//             System.out.print(num + " ");
+//         }
+//     }
+// }
+
