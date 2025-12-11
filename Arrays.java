@@ -351,3 +351,86 @@
 //     }
 // }
 
+
+// rotate array
+// public class Arrays {
+//     public static void reverse(int[] arr, int i, int j) {
+//         while (i <= j) {
+//             int temp = arr[i];
+//             arr[i] = arr[j];
+//             arr[j] = temp;
+//             i++;
+//             j--;
+//         }
+//     }
+
+//     public static void rotate(int[] arr, int d) {
+//         int n = arr.length;
+//         reverse(arr, 0, d - 1);
+//         reverse(arr, d, n - 1);
+//         reverse(arr, 0, n - 1);
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 10, 20, 30, 40, 50, 60 };
+//         int d = 2;
+
+//         rotate(arr, d);
+
+//         for (int num : arr) {
+//             System.out.print(num + " ");
+//         }
+//     }
+// }
+
+//missing element
+
+// public class Arrays {
+//     public static int missingNumber(int[] arr) {
+//         int n = arr.length + 1;
+//         int sum = n * (n + 1) / 2;
+//         int actualSum = 0;
+
+//         for (int num : arr) {
+//             actualSum += num;
+//         }
+//         int missing = sum - actualSum;
+//         return missing;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 1, 2, 3, 5 };
+//         System.out.println(missingNumber(arr));
+//     }
+// }
+
+// segregate 0's and 1's
+
+public class Arrays {
+    public static void segregate(int[] arr) {
+        int zero = 0;
+        int one = 0;
+        for (int num : arr) {
+            if (num == 0) {
+                zero++;
+            } else {
+                one++;
+            }
+        }
+        for (int i = 0; i < one; i++) {
+            arr[i] = 1;
+        }
+        for (int i = one; i <= arr.length - 1; i++) {
+            arr[i] = 0;
+
+        }
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 0, 1, 0, 1, 0, 1, 0 };
+        segregate(arr);
+    }
+}
