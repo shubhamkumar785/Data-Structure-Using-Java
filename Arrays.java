@@ -264,3 +264,36 @@
 //     }
 // }
 
+
+
+// second approach using double loop(Two-Pass Method)
+// public class Arrays {
+
+//     public static int findSecondMax(int[] arr) {
+//         int fMax = Integer.MIN_VALUE;
+//         int sMax = Integer.MIN_VALUE;
+
+//         for (int i = 0; i < arr.length; i++) {
+//             if (arr[i] > fMax) {
+//                 fMax = arr[i];
+//             }
+//         }
+
+//         for (int i = 0; i < arr.length; i++) {
+//             if (arr[i] > sMax && arr[i] != fMax) {
+//                 sMax = arr[i];
+//             }
+//         }
+
+//         return sMax;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 20, 20, 8, 9, 10, 15 };
+//         System.out.println(findSecondMax(arr));
+//     }
+// }
+
+
+
+
