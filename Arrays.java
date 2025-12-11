@@ -236,3 +236,31 @@
 //         System.out.println("Indexes: " + result[0] + ", " + result[1]);
 //     }
 // }
+
+
+
+
+// // Print the second maximum element
+
+// public class Arrays {
+//     public static int secondMax(int[] arr) {
+//         int first = Integer.MIN_VALUE;
+//         int second = Integer.MIN_VALUE;
+
+//         for (int i = 0; i < arr.length; i++) {
+//             if (first < arr[i]) {
+//                 second = first;
+//                 first = arr[i];
+//             } else if (arr[i] > second && arr[i] != first) {
+//                 second = arr[i];
+//             }
+//         }
+//         return second;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 10, 20, 30, 40, 50 };
+//         System.out.println(secondMax(arr));
+//     }
+// }
+
