@@ -53,3 +53,42 @@ public class ArrayListDemo {
         System.out.print(arr);
     }
 }
+
+
+
+
+// // Adding one in last index
+
+// public class ArrayListDemo {
+//     public static ArrayList<Integer> addOne(ArrayList<Integer> arr) {
+//         ArrayList<Integer> ans = new ArrayList<>();
+//         int n = arr.size() - 1;
+//         int carry = 1;
+//         for (int i = n; i >= 0; i--) {
+//             if (arr.get(i) + carry <= 9) {
+//                 ans.add(arr.get(i) + carry);
+//                 carry = 0;
+//             } else {
+//                 ans.add(0);
+//                 carry = 1;
+//             }
+//         }
+//         if (carry == 1) {
+//             ans.add(1);
+//         }
+//         Collections.reverse(ans);
+//         return ans;
+//     }
+
+//     public static void main(String[] args) {
+//         ArrayList<Integer> arr = new ArrayList<>();
+//         arr.add(9);
+//         arr.add(9);
+//         arr.add(9);
+//         arr.add(9);
+
+//         ArrayList<Integer> result = addOne(arr);
+//         System.out.println(result);
+//     }
+// }
+
