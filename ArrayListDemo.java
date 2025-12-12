@@ -8,7 +8,12 @@ public class ArrayListDemo {
         arr.add(7);
         arr.add(5);
 
-        System.out.println(arr);
         System.out.println(arr.get(2));
+        arr.set(3, 16); // change a value/ update
+        System.out.println(arr); // display a element
+        int n = arr.size(); // find the size of arrayList
+        for (int i = 0; i < n; i++) {  // display using loop
+            System.out.print(arr.get(i) + " ");
+        }
     }
 }
