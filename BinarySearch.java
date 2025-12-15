@@ -77,3 +77,29 @@ public class BinarySearch {
     }
 }
 
+
+
+
+
+// search a peak element
+
+public class BinarySearch {
+    public static int peakElement(int[] arr) {
+        int left = 0, right = arr.length - 1;
+        while (left < right) {
+            int mid = (left + right) / 2;
+            if (arr[mid] < arr[mid + 1]) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+
+        }
+        return left;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { -1, 0, 2, 4, 6, 8, 5, 3 };
+        System.out.print(peakElement(arr));
+    }
+}
