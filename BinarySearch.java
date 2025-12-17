@@ -170,3 +170,25 @@ public class BinarySearch {
 }
 
 
+
+
+
+// floor of square root
+
+public class BinarySearch {
+    public static int squareRoot(int n) {
+        int root = 0;
+        for (int i = 0; i <= n; i++) {
+            if (i * i >= n) {
+                break;
+            }
+            root = i;
+        }
+        return root;
+    }
+
+    public static void main(String[] args) {
+        int n = 11;
+        System.out.println(squareRoot(n));
+    }
+}
