@@ -141,3 +141,32 @@ public class BinarySearch {
 
 
 
+
+
+// floor in a sorted aaray 
+
+public class BinarySearch {
+    public static int floor(int[] arr, int x) {
+        int left = 0, right = arr.length - 1;
+        int idx = -1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] > x) {
+                right = mid - 1;
+            } else if (arr[mid] <= x) {
+                idx = mid;
+                left = mid + 1;
+            }
+        }
+        return idx;
+
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 1, 2, 4, 10, 10, 12, 19 };
+        int x = 5;
+        System.out.println(floor(arr, x));
+    }
+}
+
+
