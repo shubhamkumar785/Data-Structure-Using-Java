@@ -176,19 +176,23 @@ public class BinarySearch {
 // floor of square root
 
 public class BinarySearch {
-    public static int squareRoot(int n) {
-        int root = 0;
-        for (int i = 0; i <= n; i++) {
-            if (i * i >= n) {
-                break;
+    public static int floorSqrt(int n) {
+        int low = 0, high = n;
+        while (low <= n) {
+            int mid = (low + high) / 2;
+            if (mid * mid == n) {
+                return mid;
+            } else if (mid * mid > n) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
             }
-            root = i;
         }
-        return root;
+        return high;
     }
 
     public static void main(String[] args) {
-        int n = 11;
-        System.out.println(squareRoot(n));
+        int n = 20;
+        System.out.println(floorSqrt(n));
     }
 }
