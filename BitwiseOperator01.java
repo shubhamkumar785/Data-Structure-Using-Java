@@ -45,3 +45,25 @@ public class BitwiseOperator01 {
 }
 
 
+// power of 4
+
+public class BitwiseOperator01 {
+    public static boolean isPowerOfFour(int n){
+        if(n <= 0){
+            return false;
+        }
+        while(n % 2 == 0){
+            n = n / 2;
+        }
+        return(n == 1);
+    }
+    public static void main(String[] args) {
+        int n = 64;
+        if (isPowerOfFour(n)) {
+            System.out.println(n + " is power of 4");
+        } else {
+            System.out.println(n + " is not power of 4");
+        }
+    }
+}
+
