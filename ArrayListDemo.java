@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 // public class ArrayListDemo {
 //     public static void main(String[] args) {
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 //     }
 // }
 
-// // reverse a array using two pointer approach not used build in function
+// reverse a array using two pointer approach not used build in function
 
 // public class ArrayListDemo {
 //     public static void reverse(ArrayList<Integer> arr) {
@@ -53,9 +54,6 @@ import java.util.ArrayList;
 //         System.out.print(arr);
 //     }
 // }
-
-
-
 
 // // Adding one in last index
 
@@ -92,31 +90,28 @@ import java.util.ArrayList;
 //     }
 // }
 
-
-
 // merge two sorted array different array 
 
-// public class ArrayListDemo {
-//     public static void addTwoArr(int[] arr1, int[] arr2) {
-//         ArrayList<Integer> ans = new ArrayList<>();
-//         for (int num : arr1) {
-//             ans.add(num);
-//         }
-//         for (int num : arr2) {
-//             ans.add(num);
-//         }
-//         Collections.sort(ans);
+public class ArrayListDemo {
+    public static void addTwoArr(int[] arr1, int[] arr2) {
+        ArrayList<Integer> ans = new ArrayList<>();
+        for (int num : arr1) {
+            ans.add(num);
+        }
+        for (int num : arr2) {
+            ans.add(num);
+        }
+        Collections.sort(ans);
 
-//         for (int num : ans) {
-//             System.out.print(num + " ");
-//         }
+        for (int num : ans) {
+            System.out.print(num + " ");
+        }
 
-//     }
+    }
 
-//     public static void main(String[] args) {
-//         int[] arr1 = { 2, 4, 6, 8 };
-//         int[] arr2 = { 1, 3, 5, 7, 9 };
-//         addTwoArr(arr1, arr2);
-//     }
-// }
-
+    public static void main(String[] args) {
+        int[] arr1 = { 2, 4, 6, 8 };
+        int[] arr2 = { 1, 3, 5, 7, 9 };
+        addTwoArr(arr1, arr2);
+    }
+}
