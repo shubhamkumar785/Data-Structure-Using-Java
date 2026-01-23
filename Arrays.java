@@ -915,7 +915,7 @@
 //         for (int i = 0; i < arr.length; i++) {
 //             if (i % 2 == 0) {
 //                 arr[i] += 10;
-//             } else {
+//               } else {
 //                 arr[i] *= 2;
 //             }
 //         }
@@ -930,21 +930,164 @@
 //     }
 // }
 
-// search an arary 
+// ==============================================
+//  search an arary 
+//  ===============================================
 
-public class Arrays {
-    public static boolean search(int[] arr, int target) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == target) {
-                return true;
-            }
-        }
-        return false;
-    }
+// public class Arrays {
+//     public static boolean search(int[] arr, int target) {
+//         for (int i = 0; i < arr.length; i++) {
+//             if (arr[i] == target) {
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
 
-    public static void main(String[] args) {
-        int[] arr = { 10, 20, 30, 40, 50, 60 };
-        int target = 40;
-        System.out.println(search(arr, target));
-    }
-}
+//     public static void main(String[] args) {
+//         int[] arr = { 10, 20, 30, 40, 50, 60 };
+//         int target = 40;
+//         System.out.println(search(arr, target));
+//     }
+// }
+
+// ==============================================================================
+//            Print the second Maximum element in the array
+// ==============================================================================
+// public class Arrays {
+//     public static int secondMaximum(int[] arr) {
+//         int firstMax = Integer.MIN_VALUE;
+//         int secondMax = Integer.MIN_VALUE;
+
+//         for (int i = 0; i < arr.length; i++) {
+//             if (arr[i] > firstMax) {
+//                 secondMax = firstMax;
+//                 firstMax = arr[i];
+//             } else if (arr[i] > secondMax && arr[i] != firstMax) {
+//                 secondMax = arr[i];
+//             }
+//         }
+//         return secondMax;
+
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 10, 20, 30, 40, 50 };
+//         System.out.println(secondMaximum(arr));
+//     }
+// }
+
+// ==============================================================================
+//                               Reverse Array
+// ==============================================================================
+
+// public class Arrays {
+//     public static void reverse(int[] arr) {
+//         int left = 0, right = arr.length - 1;
+//         while (left <= right) {
+//             int temp = arr[left];
+//             arr[left] = arr[right];
+//             arr[right] = temp;
+//             left++;
+//             right--;
+//         }
+//         for (int num : arr) {
+//             System.out.print(num + " ");
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 10, 20, 30, 40, 50 };
+//         reverse(arr);
+
+//     }
+// }
+
+// ==============================================================================
+//                              Rotate Array
+// ==============================================================================
+
+// public class Arrays {
+//     public static void reverse(int[] arr, int i, int j) {
+//         while (i <= j) {
+//             int temp = arr[i];
+//             arr[i] = arr[j];
+//             arr[j] = temp;
+//             i++;
+//             j--;
+//         }
+//     }
+
+//     public static void rotate(int[] arr, int k) {
+//         int n = arr.length - 1;
+//         reverse(arr, 0, n);
+//         reverse(arr, 0, k - 1);
+//         reverse(arr, k, n);
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 6, 8, 1, 2, 4, 9, 0 };
+//         int k = 2;
+//         rotate(arr, k);
+//         for (int num : arr) {
+//             System.out.print(num + " ");
+//         }
+//     }
+// }
+
+// ==============================================================================
+//                               missing element
+// ==============================================================================
+
+// public class Arrays {
+//     public static int missing(int[] arr) {
+//         int n = arr.length + 1;
+//         int totalSum = n * (n + 1) / 2;
+//         int actualSum = 0;
+//         for (int num : arr) {
+//             actualSum += num;
+//         }
+//         return totalSum - actualSum;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 1, 2, 3, 5 };
+//         System.out.println(missing(arr));
+//     }
+// }
+
+// ==============================================================================
+//                               segregate 0's and 1's
+// ==============================================================================
+
+// public class Arrays {
+//     public static void segregate(int[] arr) {
+//         int one = 0;
+//         for (int num : arr) {
+//             if (num == 1) {
+//                 one++;
+//             }
+//         }
+//         for (int i = 0; i < one; i++) {
+//             arr[i] = 1;
+//         }
+//         for (int i = one; i < arr.length; i++) {
+//             arr[i] = 0;
+//         }
+//         for (int num : arr) {
+//             System.out.print(num + " ");
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 1, 0, 1, 0, 1, 0, 0, 1, 0, 1 };
+//         segregate(arr);
+//     }
+// }
+
+
+
+
+// ==============================================================================
+//                               wave array
+// ==============================================================================
