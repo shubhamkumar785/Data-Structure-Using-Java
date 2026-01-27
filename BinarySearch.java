@@ -600,24 +600,66 @@
 
 // another way
 
+// public class BinarySearch {
+//     public static int floorSqrt(int n) {
+//         int low = 1, high = n;
+//         while (low <= high) {
+//             int mid = (low + high) / 2;
+//             if (mid * mid == n) {
+//                 return mid;
+//             } else if (mid * mid > n) {
+//                 high = mid - 1;
+//             } else {
+//                 low = mid + 1;
+//             }
+//         }
+//         return high;
+//     }
+
+//     public static void main(String[] args) {
+//         int n = 11;
+//         System.out.println(floorSqrt(n));
+//     }
+// }
+
+// single amoung double sorted array
+
 public class BinarySearch {
-    public static int floorSqrt(int n) {
-        int low = 1, high = n;
+    public static int findOnce(int[] arr) {
+        int n = arr.length;
+        if (n == 1)
+            return arr[0];
+        if (arr[0] != arr[1])
+            return arr[0];
+        if (arr[n - 1] != arr[n - 2])
+            return arr[n - 1];
+
+        int low = 0, high = n - 1;
         while (low <= high) {
-            int mid = (low + high) / 2;
-            if (mid * mid == n) {
-                return mid;
-            } else if (mid * mid > n) {
-                high = mid - 1;
+            int mid = low + (high - low) / 2;
+            if (arr[mid] != arr[mid - 1] && arr[mid] != arr[mid + 1]) {
+                return arr[mid];
+            }
+            int first = mid, second = mid;
+            if (arr[mid - 1] == arr[mid]) {
+                first = mid - 1;
             } else {
-                low = mid + 1;
+                second = mid + 1;
+            }
+            int leftCount = first - low;
+            int rightCount = high - second;
+
+            if (leftCount % 2 == 0) {
+                low = second + 1;
+            } else {
+                high = first - 1;
             }
         }
-        return high;
+        return -1;
     }
 
     public static void main(String[] args) {
-        int n = 11;
-        System.out.println(floorSqrt(n));
+        int[] arr = { 1, 1, 2, 2, 3, 3, 4, 50, 50, 65, 65 };
+        System.out.println(findOnce(arr));
     }
 }
