@@ -580,20 +580,44 @@
 
 // floor squatre root
 
+// public class BinarySearch {
+//     public static int floorSquareRoot(int n) {
+//         int root = 0;
+//         for (int i = 0; i <= n; i++) {
+//             if (i * i > n) {
+//                 break;
+//             }
+//             root = i;
+//         }
+//         return root;
+//     }
+
+//     public static void main(String[] args) {
+//         int n = 11;
+//         System.out.println(floorSquareRoot(n));
+//     }
+// }
+
+// another way
+
 public class BinarySearch {
-    public static int floorSquareRoot(int n) {
-        int root = 0;
-        for (int i = 0; i <= n; i++) {
-            if (i * i > n) {
-                break;
+    public static int floorSqrt(int n) {
+        int low = 1, high = n;
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if (mid * mid == n) {
+                return mid;
+            } else if (mid * mid > n) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
             }
-            root = i;
         }
-        return root;
+        return high;
     }
 
     public static void main(String[] args) {
         int n = 11;
-        System.out.println(floorSquareRoot(n));
+        System.out.println(floorSqrt(n));
     }
 }
