@@ -624,6 +624,48 @@
 
 // single amoung double sorted array
 
+// public class BinarySearch {
+//     public static int findOnce(int[] arr) {
+//         int n = arr.length;
+//         if (n == 1)
+//             return arr[0];
+//         if (arr[0] != arr[1])
+//             return arr[0];
+//         if (arr[n - 1] != arr[n - 2])
+//             return arr[n - 1];
+
+//         int low = 0, high = n - 1;
+//         while (low <= high) {
+//             int mid = low + (high - low) / 2;
+//             if (arr[mid] != arr[mid - 1] && arr[mid] != arr[mid + 1]) {
+//                 return arr[mid];
+//             }
+//             int first = mid, second = mid;
+//             if (arr[mid - 1] == arr[mid]) {
+//                 first = mid - 1;
+//             } else {
+//                 second = mid + 1;
+//             }
+//             int leftCount = first - low;
+//             int rightCount = high - second;
+
+//             if (leftCount % 2 == 0) {
+//                 low = second + 1;
+//             } else {
+//                 high = first - 1;
+//             }
+//         }
+//         return -1;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 1, 1, 2, 2, 3, 3, 4, 50, 50, 65, 65 };
+//         System.out.println(findOnce(arr));
+//     }
+// }
+
+// practice
+
 public class BinarySearch {
     public static int findOnce(int[] arr) {
         int n = arr.length;
@@ -634,26 +676,27 @@ public class BinarySearch {
         if (arr[n - 1] != arr[n - 2])
             return arr[n - 1];
 
-        int low = 0, high = n - 1;
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
+        int left = 0, right = n - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
             if (arr[mid] != arr[mid - 1] && arr[mid] != arr[mid + 1]) {
                 return arr[mid];
             }
             int first = mid, second = mid;
             if (arr[mid - 1] == arr[mid]) {
-                first = mid - 1;
+                first = arr[mid - 1];
             } else {
-                second = mid + 1;
+                second = arr[mid + 1];
             }
-            int leftCount = first - low;
-            int rightCount = high - second;
+            int firstCount = first - left;
+            int secondCount = right - second;
 
-            if (leftCount % 2 == 0) {
-                low = second + 1;
+            if (firstCount % 2 == 0) {
+                left = second + 1;
             } else {
-                high = first - 1;
+                right = first - 1;
             }
+
         }
         return -1;
     }
