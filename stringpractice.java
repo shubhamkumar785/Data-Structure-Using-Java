@@ -100,17 +100,40 @@
 //                                    substring
 // ------------------------------------------------------------------------------------
 
+// public class stringpractice {
+//     public static void subString(String str) {
+//         for (int i = 0; i < str.length(); i++) {
+//             for (int j = i + 1; j <= str.length(); j++) {
+//                 System.out.print(str.substring(i, j) + " ");
+//             }
+//             System.out.println();
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "shubham";
+//         subString(str);
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                                   sum of all substring
+// ------------------------------------------------------------------------------------
+
 public class stringpractice {
-    public static void subString(String str) {
+    public static int sumAllSubstring(String str) {
+        int sum = 0;
         for (int i = 0; i < str.length(); i++) {
             for (int j = i + 1; j <= str.length(); j++) {
-                System.out.println(str.substring(i, j));
+                int num = Integer.parseInt(str.substring(i, j));
+                sum += num;
             }
         }
+        return sum;
     }
 
     public static void main(String[] args) {
-        String str = "shubham";
-        subString(str);
+        String str = "4567";
+        System.out.println(sumAllSubstring(str));
     }
 }
