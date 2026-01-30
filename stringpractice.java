@@ -1,6 +1,7 @@
 
-// count the number of vowels in a string
-
+// ------------------------------------------------------------------------------------
+//                  count the number of vowels in a string
+// ------------------------------------------------------------------------------------
 // public class stringpractice {
 //     public static int countVowels(String str) {
 //         int count = 0;
@@ -20,8 +21,9 @@
 //     }
 // }
 
-// palindrome string used two pointer approach
-
+// ------------------------------------------------------------------------------------
+//                  palindrome string used two pointer approach
+// ------------------------------------------------------------------------------------
 // public class stringpractice {
 //     public static boolean palindrome(String str) {
 //         int low = 0, high = str.length() - 1;
@@ -41,8 +43,9 @@
 //     }
 // }
 
-// the first letter is lower hance all string is lowercase
-
+// ------------------------------------------------------------------------------------
+//                   the first letter is lower hance all string is lowercase
+// ------------------------------------------------------------------------------------
 // public class stringpractice {
 //     public static String modify(String str) {
 //         if (Character.isLowerCase(str.charAt(0))) {
@@ -59,8 +62,9 @@
 //     }
 // }
 
-// convert integer to string
-
+// ------------------------------------------------------------------------------------
+//                                   convert integer to string
+// ------------------------------------------------------------------------------------
 // public class stringpractice {
 //     public static void main(String[] args) {
 //         int n = 6777;
@@ -69,8 +73,9 @@
 //     }
 // }
 
-// string to integer
-
+// ------------------------------------------------------------------------------------
+//                                        string to integer
+// ------------------------------------------------------------------------------------
 // public class stringpractice {
 //     public static void main(String[] args) {
 //         String str = "78996423";
@@ -78,15 +83,34 @@
 //         System.out.println(n);
 //     }
 // }
+// ------------------------------------------------------------------------------------
+//                                    string to character array
+// ------------------------------------------------------------------------------------
+// public class stringpractice {
+//     public static void main(String[] args) {
+//         String str = "shubham";
+//         char[] ch = str.toCharArray();
+//         for (char ele : ch) {
+//             System.out.print(ele + " ");
+//         }
+//     }
+// }
 
-//  string to character array
+// ------------------------------------------------------------------------------------
+//                                    substring
+// ------------------------------------------------------------------------------------
 
 public class stringpractice {
+    public static void subString(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i + 1; j <= str.length(); j++) {
+                System.out.println(str.substring(i, j));
+            }
+        }
+    }
+
     public static void main(String[] args) {
         String str = "shubham";
-        char[] ch = str.toCharArray();
-        for (char ele : ch) {
-            System.out.print(ele + " ");
-        }
+        subString(str);
     }
 }
