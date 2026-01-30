@@ -43,18 +43,28 @@
 
 // the first letter is lower hance all string is lowercase
 
+// public class stringpractice {
+//     public static String modify(String str) {
+//         if (Character.isLowerCase(str.charAt(0))) {
+//             return str.toLowerCase();
+
+//         } else {
+//             return str.toUpperCase();
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "shUBHAM";
+//         System.out.println(modify(str));
+//     }
+// }
+
+// convert integer to string
+
 public class stringpractice {
-    public static String modify(String str) {
-        if (Character.isLowerCase(str.charAt(0))) {
-            return str.toLowerCase();
-
-        } else {
-            return str.toUpperCase();
-        }
-    }
-
     public static void main(String[] args) {
-        String str = "shUBHAM";
-        System.out.println(modify(str));
+        int n = 6777;
+        String str = Integer.toString(n);
+        System.out.println(str);
     }
 }
