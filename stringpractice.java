@@ -22,21 +22,39 @@
 
 // palindrome string used two pointer approach
 
+// public class stringpractice {
+//     public static boolean palindrome(String str) {
+//         int low = 0, high = str.length() - 1;
+//         while (low <= high) {
+//             if (str.charAt(low) != str.charAt(high)) {
+//                 return false;
+//             }
+//             low++;
+//             high--;
+//         }
+//         return true;
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "madam";
+//         System.out.println(palindrome(str));
+//     }
+// }
+
+// the first letter is lower hance all string is lowercase
+
 public class stringpractice {
-    public static boolean palindrome(String str) {
-        int low = 0, high = str.length() - 1;
-        while (low <= high) {
-            if (str.charAt(low) != str.charAt(high)) {
-                return false;
-            }
-            low++;
-            high--;
+    public static String modify(String str) {
+        if (Character.isLowerCase(str.charAt(0))) {
+            return str.toLowerCase();
+
+        } else {
+            return str.toUpperCase();
         }
-        return true;
     }
 
     public static void main(String[] args) {
-        String str = "madam";
-        System.out.println(palindrome(str));
+        String str = "shUBHAM";
+        System.out.println(modify(str));
     }
 }
