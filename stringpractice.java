@@ -120,20 +120,44 @@
 //                                   sum of all substring
 // ------------------------------------------------------------------------------------
 
+// public class stringpractice {
+//     public static int sumAllSubstring(String str) {
+//         int sum = 0;
+//         for (int i = 0; i < str.length(); i++) {
+//             for (int j = i + 1; j <= str.length(); j++) {
+//                 int num = Integer.parseInt(str.substring(i, j));
+//                 sum += num;
+//             }
+//         }
+//         return sum;
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "4567";
+//         System.out.println(sumAllSubstring(str));
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                                   compare two string
+// ------------------------------------------------------------------------------------
+
 public class stringpractice {
-    public static int sumAllSubstring(String str) {
-        int sum = 0;
+    public static boolean equal(String str, String gtr) {
+        if (str.length() != gtr.length()) {
+            return false;
+        }
         for (int i = 0; i < str.length(); i++) {
-            for (int j = i + 1; j <= str.length(); j++) {
-                int num = Integer.parseInt(str.substring(i, j));
-                sum += num;
+            if (str.charAt(i) != gtr.charAt(i)) {
+                return false;
             }
         }
-        return sum;
+        return true;
     }
 
     public static void main(String[] args) {
-        String str = "4567";
-        System.out.println(sumAllSubstring(str));
+        String str = "shubham";
+        String gtr = "shubham";
+        System.out.println(equal(str, gtr));
     }
 }
