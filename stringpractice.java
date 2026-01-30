@@ -139,25 +139,98 @@
 // }
 
 // ------------------------------------------------------------------------------------
-//                                   compare two string
+//                           compare two string(not used builtin method)
 // ------------------------------------------------------------------------------------
 
+// public class stringpractice {
+//     public static boolean equal(String str, String gtr) {
+//         if (str.length() != gtr.length()) {
+//             return false;
+//         }
+//         for (int i = 0; i < str.length(); i++) {
+//             if (str.charAt(i) != gtr.charAt(i)) {
+//                 return false;
+//             }
+//         }
+//         return true;
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "shubham";
+//         String gtr = "shubham";
+//         System.out.println(equal(str, gtr));
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                                 String Builder      
+// ------------------------------------------------------------------------------------
+
+// capacity
+
+// public class stringpractice {
+//     public static void main(String[] args) {
+//         StringBuilder sb = new StringBuilder(10);
+//         System.out.println(sb.length() + " " + sb.capacity());
+//         sb.append("shubham");
+//         System.out.println(sb.length() + " " + sb.capacity());
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                                 String Builder to string     
+// ------------------------------------------------------------------------------------
+
+// public class stringpractice {
+//     public static void main(String[] args) {
+//         StringBuilder sb = new StringBuilder("shubham");
+//         String str = sb.toString();
+//         System.out.println(str);
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                                 reverse     
+// ------------------------------------------------------------------------------------
+
+// public class stringpractice {
+//     public static void reverseString(StringBuilder sb) {
+//         sb.reverse();
+//         System.out.println(sb);
+
+//     }
+
+//     public static void main(String[] args) {
+//         StringBuilder sb = new StringBuilder("shubham");
+//         reverseString(sb);
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                                 another way reverse two pointer     
+// ------------------------------------------------------------------------------------
+// Two Pointer Approach: Uses two pointers (i and j) starting from both ends of the
+// StringBuilder. Swaps characters at positions i and j, then moves pointers towards
+// the center until they meet. This reverses the StringBuilder in-place with O(n) time
+// complexity and O(1) space complexity.
+
 public class stringpractice {
-    public static boolean equal(String str, String gtr) {
-        if (str.length() != gtr.length()) {
-            return false;
+    public static void twoPointer(StringBuilder str) {
+        int i = 0, j = str.length() - 1;
+        while (i <= j) {
+            char temp1 = str.charAt(i);
+            char temp2 = str.charAt(j);
+            str.setCharAt(i, temp2);
+            str.setCharAt(j, temp1);
+            i++;
+            j--;
         }
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) != gtr.charAt(i)) {
-                return false;
-            }
-        }
-        return true;
+
     }
 
     public static void main(String[] args) {
-        String str = "shubham";
-        String gtr = "shubham";
-        System.out.println(equal(str, gtr));
+        StringBuilder str = new StringBuilder("shubham");
+        twoPointer(str);
+        System.out.println(str);
     }
 }
