@@ -1,4 +1,6 @@
 
+import java.util.Arrays;
+
 // ------------------------------------------------------------------------------------
 //                  count the number of vowels in a string
 // ------------------------------------------------------------------------------------
@@ -214,23 +216,51 @@
 // the center until they meet. This reverses the StringBuilder in-place with O(n) time
 // complexity and O(1) space complexity.
 
-public class stringpractice {
-    public static void twoPointer(StringBuilder str) {
-        int i = 0, j = str.length() - 1;
-        while (i <= j) {
-            char temp1 = str.charAt(i);
-            char temp2 = str.charAt(j);
-            str.setCharAt(i, temp2);
-            str.setCharAt(j, temp1);
-            i++;
-            j--;
-        }
+// public class stringpractice {
+//     public static void twoPointer(StringBuilder str) {
+//         int i = 0, j = str.length() - 1;
+//         while (i <= j) {
+//             char temp1 = str.charAt(i);
+//             char temp2 = str.charAt(j);
+//             str.setCharAt(i, temp2);
+//             str.setCharAt(j, temp1);
+//             i++;
+//             j--;
+//         }
 
+//     }
+
+//     public static void main(String[] args) {
+//         StringBuilder str = new StringBuilder("shubham");
+//         twoPointer(str);
+//         System.out.println(str);
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                                   anagram     
+// ------------------------------------------------------------------------------------
+
+public class stringpractice {
+    public static boolean anagram(String str, String gtr) {
+        int n1 = str.length();
+        int n2 = gtr.length();
+
+        if (n1 != n2) {
+            return false;
+        }
+        char[] c1 = str.toCharArray();
+        char[] c2 = gtr.toCharArray();
+
+        Arrays.sort(c1);
+        Arrays.sort(c2);
+
+        return Arrays.equals(c1, c2);
     }
 
     public static void main(String[] args) {
-        StringBuilder str = new StringBuilder("shubham");
-        twoPointer(str);
-        System.out.println(str);
+        String str = "anagram";
+        String gtr = "nagaram";
+        System.out.println(anagram(str, gtr));
     }
 }
