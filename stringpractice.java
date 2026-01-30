@@ -61,10 +61,32 @@
 
 // convert integer to string
 
+// public class stringpractice {
+//     public static void main(String[] args) {
+//         int n = 6777;
+//         String str = Integer.toString(n);
+//         System.out.println(str);
+//     }
+// }
+
+// string to integer
+
+// public class stringpractice {
+//     public static void main(String[] args) {
+//         String str = "78996423";
+//         int n = Integer.parseInt(str);
+//         System.out.println(n);
+//     }
+// }
+
+//  string to character array
+
 public class stringpractice {
     public static void main(String[] args) {
-        int n = 6777;
-        String str = Integer.toString(n);
-        System.out.println(str);
+        String str = "shubham";
+        char[] ch = str.toCharArray();
+        for (char ele : ch) {
+            System.out.print(ele + " ");
+        }
     }
 }
