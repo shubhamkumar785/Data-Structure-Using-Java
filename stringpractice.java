@@ -380,13 +380,85 @@
 //                          reverse each word in given string
 // ------------------------------------------------------------------------------------
 
+// public class stringpractice {
+//     public static void reverseWord(String str) {
+//         String[] words = str.split(" ");
+
+//         StringBuilder result = new StringBuilder();
+
+//         for (String word : words) {
+//             StringBuilder sb = new StringBuilder(word);
+//             sb.reverse();
+//             result.append(sb).append(" ");
+//         }
+//         System.out.println(result.toString().trim());
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "shubham is a good boy";
+//         reverseWord(str);
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                         length of word in a string
+// ------------------------------------------------------------------------------------
+
+// public class stringpractice {
+//     public static int lengthOfWord(String str) {
+//         int count = 0;
+//         for (int i = str.length() - 1; i >= 0; i--) {
+//             if (str.charAt(i) != ' ') {
+//                 count++;
+//             } else if (count > 0) {
+//                 break;
+//             }
+//         }
+//         return count;
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "shubham is a good boy";
+//         System.out.println(lengthOfWord(str));
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                     find the index of first occurence in a string
+// ------------------------------------------------------------------------------------
+
+// public class stringpractice {
+//     public static int findIndex(String str1, String str2) {
+//         int n1 = str1.length();
+//         int n2 = str2.length();
+//         for (int i = 0; i <= n1 - n2; i++) {
+//             if (str1.charAt(i) == str2.charAt(0)) {
+//                 if (str1.substring(i, i + n2).equals(str2)) {
+//                     return i;
+//                 }
+//             }
+//         }
+//         return -1;
+//     }
+
+//     public static void main(String[] args) {
+//         String str1 = "sadsadbut";
+//         String str2 = "sad";
+//         System.out.println(findIndex(str1, str2));
+
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                     reverse word in a string
+// ------------------------------------------------------------------------------------
+
 public class stringpractice {
-    public static void reverseWord(String str) {
-        String[] words = str.split(" ");
+    public static void lastWord(String str) {
 
         StringBuilder result = new StringBuilder();
 
-        for (String word : words) {
+        for (String word : str.split(" ")) {
             StringBuilder sb = new StringBuilder(word);
             sb.reverse();
             result.append(sb).append(" ");
@@ -396,6 +468,6 @@ public class stringpractice {
 
     public static void main(String[] args) {
         String str = "shubham is a good boy";
-        reverseWord(str);
+        lastWord(str);
     }
 }
