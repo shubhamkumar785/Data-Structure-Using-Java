@@ -4,7 +4,7 @@ import java.util.stream.Stream;
 
 public class deleteClass {
 
-    public static void main(String[] args) {
+    public static void main(stringpractice[] args) {
 
         // Current folder
         Path baseDir = Paths.get("").toAbsolutePath();

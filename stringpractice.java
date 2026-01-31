@@ -1,7 +1,4 @@
 
-import java.util.Arrays;
-
-// ------------------------------------------------------------------------------------
 //                  count the number of vowels in a string
 // ------------------------------------------------------------------------------------
 // public class stringpractice {
@@ -241,26 +238,74 @@ import java.util.Arrays;
 //                                   anagram     
 // ------------------------------------------------------------------------------------
 
+// public class stringpractice {
+//     public static boolean anagram(String str, String gtr) {
+//         int n1 = str.length();
+//         int n2 = gtr.length();
+
+//         if (n1 != n2) {
+//             return false;
+//         }
+//         char[] c1 = str.toCharArray();
+//         char[] c2 = gtr.toCharArray();
+
+//         Arrays.sort(c1);
+//         Arrays.sort(c2);
+
+//         return Arrays.equals(c1, c2);
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "anagram";
+//         String gtr = "nagaram";
+//         System.out.println(anagram(str, gtr));
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                               reverse string  
+// ------------------------------------------------------------------------------------
+
+// public class stringpractice {
+//     public static String reverse(String str) {
+//         char[] ch = str.toCharArray();
+//         int low = 0, high = str.length() - 1;
+//         while (low <= high) {
+//             char temp = ch[low];
+//             ch[low] = ch[high];
+//             ch[high] = temp;
+//             low++;
+//             high--;
+//         }
+//         return new String(ch);
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "shubham";
+//         System.out.println(reverse(str));
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+// most frequent character
+// ------------------------------------------------------------------------------------
+import java.util.*;
+
 public class stringpractice {
-    public static boolean anagram(String str, String gtr) {
-        int n1 = str.length();
-        int n2 = gtr.length();
+    public static void mostFrequentCharacter(String str) {
+        HashMap<Character, Integer> freq = new HashMap<>();
 
-        if (n1 != n2) {
-            return false;
+        for (char ch : str.toCharArray()) {
+            freq.put(ch, freq.getOrDefault(ch, 0) + 1);
         }
-        char[] c1 = str.toCharArray();
-        char[] c2 = gtr.toCharArray();
-
-        Arrays.sort(c1);
-        Arrays.sort(c2);
-
-        return Arrays.equals(c1, c2);
+        for (char ch : freq.keySet()) {
+            System.out.println(ch + " -> " + freq.get(ch));
+        }
     }
 
     public static void main(String[] args) {
-        String str = "anagram";
-        String gtr = "nagaram";
-        System.out.println(anagram(str, gtr));
+        String str = "character";
+        mostFrequentCharacter(str);
+
     }
 }

@@ -56,7 +56,7 @@ public class BitwiseOperator01 {
         return (n == 1);
     }
 
-    public static void main(String[] args) {
+    public static void main(stringpractice[] args) {
         int n = 16;
         if (isPowerOfFour(n)) {
             System.out.println(n + " is power of 4");
