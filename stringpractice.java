@@ -313,31 +313,89 @@
 // ------------------------------------------------------------------------------------
 //                 most frequent character using window sliding techniques
 // ------------------------------------------------------------------------------------
-import java.util.*;
+// import java.util.*;
+
+// public class stringpractice {
+//     public static char getMaxFrequency(String str) {
+//         HashMap<Character, Integer> frequency = new HashMap<>();
+
+//         for (char ch : str.toCharArray()) {
+//             frequency.put(ch, frequency.getOrDefault(ch, 0) + 1);
+
+//         }
+//         char ans = str.charAt(0);
+//         int maxFreq = -1;
+
+//         for (char ch : frequency.keySet()) {
+//             if (frequency.get(ch) > maxFreq) {
+//                 maxFreq = frequency.get(ch);
+//                 ans = ch;
+//             }
+//         }
+//         return ans;
+
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "aaccetttzz";
+//         System.out.println(getMaxFrequency(str));
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                              non repeating element
+// ------------------------------------------------------------------------------------
+
+// import java.util.*;
+
+// public class stringpractice {
+//     public static char nonRepeatingElement(String str) {
+//         HashMap<Character, Integer> freq = new HashMap<>();
+
+//         for (char ch : str.toCharArray()) {
+//             freq.put(ch, freq.getOrDefault(ch, 0) + 1);
+//         }
+//         for (char ch : str.toCharArray()) {
+//             if (freq.get(ch) == 1) {
+//                 return ch;
+//             }
+//         }
+//         return '\0';
+
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "aabbcddee";
+//         char result = nonRepeatingElement(str);
+
+//         if (result != '\0') {
+//             System.out.println("First non-repeating character: " + result);
+//         } else {
+//             System.out.println("No non-repeating character found");
+//         }
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                          reverse each word in given string
+// ------------------------------------------------------------------------------------
 
 public class stringpractice {
-    public static char getMaxFrequency(String str) {
-        HashMap<Character, Integer> frequency = new HashMap<>();
+    public static void reverseWord(String str) {
+        String[] words = str.split(" ");
 
-        for (char ch : str.toCharArray()) {
-            frequency.put(ch, frequency.getOrDefault(ch, 0) + 1);
+        StringBuilder result = new StringBuilder();
 
+        for (String word : words) {
+            StringBuilder sb = new StringBuilder(word);
+            sb.reverse();
+            result.append(sb).append(" ");
         }
-        char ans = str.charAt(0);
-        int maxFreq = -1;
-
-        for (char ch : frequency.keySet()) {
-            if (frequency.get(ch) > maxFreq) {
-                maxFreq = frequency.get(ch);
-                ans = ch;
-            }
-        }
-        return ans;
-
+        System.out.println(result.toString().trim());
     }
 
     public static void main(String[] args) {
-        String str = "aaccetttzz";
-        System.out.println(getMaxFrequency(str));
+        String str = "shubham is a good boy";
+        reverseWord(str);
     }
 }
