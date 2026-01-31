@@ -287,25 +287,57 @@
 // }
 
 // ------------------------------------------------------------------------------------
-// most frequent character
+//                             count frequent character
+// ------------------------------------------------------------------------------------
+// import java.util.*;
+
+// public class stringpractice {
+//     public static void mostFrequentCharacter(String str) {
+//         HashMap<Character, Integer> freq = new HashMap<>();
+
+//         for (char ch : str.toCharArray()) {
+//             freq.put(ch, freq.getOrDefault(ch, 0) + 1);
+//         }
+//         for (char ch : freq.keySet()) {
+//             System.out.println(ch + " -> " + freq.get(ch));
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "character";
+//         mostFrequentCharacter(str);
+
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                 most frequent character using window sliding techniques
 // ------------------------------------------------------------------------------------
 import java.util.*;
 
 public class stringpractice {
-    public static void mostFrequentCharacter(String str) {
-        HashMap<Character, Integer> freq = new HashMap<>();
+    public static char getMaxFrequency(String str) {
+        HashMap<Character, Integer> frequency = new HashMap<>();
 
         for (char ch : str.toCharArray()) {
-            freq.put(ch, freq.getOrDefault(ch, 0) + 1);
+            frequency.put(ch, frequency.getOrDefault(ch, 0) + 1);
+
         }
-        for (char ch : freq.keySet()) {
-            System.out.println(ch + " -> " + freq.get(ch));
+        char ans = str.charAt(0);
+        int maxFreq = -1;
+
+        for (char ch : frequency.keySet()) {
+            if (frequency.get(ch) > maxFreq) {
+                maxFreq = frequency.get(ch);
+                ans = ch;
+            }
         }
+        return ans;
+
     }
 
     public static void main(String[] args) {
-        String str = "character";
-        mostFrequentCharacter(str);
-
+        String str = "aaccetttzz";
+        System.out.println(getMaxFrequency(str));
     }
 }
