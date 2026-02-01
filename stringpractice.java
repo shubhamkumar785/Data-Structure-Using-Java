@@ -453,21 +453,132 @@
 //                     reverse word in a string
 // ------------------------------------------------------------------------------------
 
+// public class stringpractice {
+//     public static void lastWord(String str) {
+
+//         StringBuilder result = new StringBuilder();
+
+//         for (String word : str.split(" ")) {
+//             StringBuilder sb = new StringBuilder(word);
+//             sb.reverse();
+//             result.append(sb).append(" ");
+//         }
+//         System.out.println(result.toString().trim());
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "shubham is a good boy";
+//         lastWord(str);
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                                   another way
+// ------------------------------------------------------------------------------------
+
+// public class stringpractice {
+//     public static 
+//     public static void main(String[] args) {
+//         String str = "shubham is boy";  // boy is shubham
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                      palindrome in a string
+// ------------------------------------------------------------------------------------
+
+// public class stringpractice {
+//     public static boolean palindrome(String str) {
+//         int n = str.length();
+//         if (n == 1) {
+//             return true;
+//         }
+//         int low = 0, high = str.length() - 1;
+//         while (low <= high) {
+//             if (str.charAt(low) != str.charAt(high)) {
+//                 return false;
+//             }
+//             low++;
+//             high--;
+
+//         }
+//         return true;
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "madam";
+//         System.out.println(palindrome(str));
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                                     anagram
+// ------------------------------------------------------------------------------------
+
+// import java.util.Arrays;
+
+// public class stringpractice {
+//     public static boolean anagram(String str1, String str2) {
+//         int n1 = str1.length() - 1;
+//         int n2 = str2.length() - 1;
+
+//         if (n1 != n2) {
+//             return false;
+//         }
+//         char[] char1 = str1.toCharArray();
+//         char[] char2 = str2.toCharArray();
+
+//         Arrays.sort(char1);
+//         Arrays.sort(char2);
+
+//         return Arrays.equals(char1, char2);
+//     }
+
+//     public static void main(String[] args) {
+//         String str1 = "silent";
+//         String str2 = "listen";
+//         System.out.println(anagram(str1, str2));
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                                     reverse 
+// ------------------------------------------------------------------------------------
+
+// public class stringpractice {
+//     public static String reverse(String str) {
+//         StringBuilder sb = new StringBuilder(str);
+//         return sb.reverse().toString();
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "shubham";
+//         System.out.println(reverse(str));
+//     }
+// }
+
+// used two pointer approach
+
 public class stringpractice {
-    public static void lastWord(String str) {
-
-        StringBuilder result = new StringBuilder();
-
-        for (String word : str.split(" ")) {
-            StringBuilder sb = new StringBuilder(word);
-            sb.reverse();
-            result.append(sb).append(" ");
+    public static void reverse(String str) {
+        int low = 0, high = str.length() - 1;
+        char[] ch = str.toCharArray();
+        while (low <= high) {
+            char temp = ch[low];
+            ch[low] = ch[high];
+            ch[high] = temp;
+            low++;
+            high--;
         }
-        System.out.println(result.toString().trim());
+
+        for (char c : ch) {
+            System.out.print(c + " ");
+        }
+
     }
 
     public static void main(String[] args) {
-        String str = "shubham is a good boy";
-        lastWord(str);
+        String str = "shubham";
+        reverse(str);
     }
 }
