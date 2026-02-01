@@ -559,26 +559,51 @@
 
 // used two pointer approach
 
-public class stringpractice {
-    public static void reverse(String str) {
-        int low = 0, high = str.length() - 1;
-        char[] ch = str.toCharArray();
-        while (low <= high) {
-            char temp = ch[low];
-            ch[low] = ch[high];
-            ch[high] = temp;
-            low++;
-            high--;
-        }
+// public class stringpractice {
+//     public static void reverse(String str) {
+//         int low = 0, high = str.length() - 1;
+//         char[] ch = str.toCharArray();
+//         while (low <= high) {
+//             char temp = ch[low];
+//             ch[low] = ch[high];
+//             ch[high] = temp;
+//             low++;
+//             high--;
+//         }
 
-        for (char c : ch) {
-            System.out.print(c + " ");
+//         for (char c : ch) {
+//             System.out.print(c + " ");
+//         }
+
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "shubham";
+//         reverse(str);
+//     }
+// }
+
+// ------------------------------------------------------------------------------------
+//                              count of character in string 
+// ------------------------------------------------------------------------------------
+
+import java.util.*;
+
+public class stringpractice {
+    public static void countCharacter(String str) {
+        HashMap<Character, Integer> freq = new HashMap<>();
+
+        for (char ch : str.toCharArray()) {
+            freq.put(ch, freq.getOrDefault(ch, 0) + 1);
+        }
+        for (char ch : freq.keySet()) {
+            System.out.println(ch + " -> " + freq.get(ch));
         }
 
     }
 
     public static void main(String[] args) {
         String str = "shubham";
-        reverse(str);
+        countCharacter(str);
     }
 }
