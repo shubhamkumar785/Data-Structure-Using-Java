@@ -112,3 +112,24 @@ public class recursion1 {
     }
 }
 
+
+
+
+// ------------------------------------------------------------------------------------------------------
+//                            sum of n natural number
+// ------------------------------------------------------------------------------------------------------
+
+public class recursion1 {
+    public static int sumNumber(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        return n + sumNumber(n - 1);
+
+    }
+
+    public static void main(String[] args) {
+        int n = 100;
+        System.out.println(sumNumber(n));
+    }
+}
