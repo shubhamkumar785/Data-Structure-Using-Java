@@ -285,3 +285,35 @@ public class recursion1 {
     }
 }
 
+
+
+// ------------------------------------------------------------------------------------------------------
+//                               binary search using recursion
+// ------------------------------------------------------------------------------------------------------
+
+public class recursion1 {
+    public static int helper(int[] arr, int tar, int low, int high) {
+        if (low > high) {
+            return -1;
+        }
+        int mid = low + (high - low) / 2;
+        if (arr[mid] == tar) {
+            return mid;
+        } else if (arr[mid] > tar) {
+            return helper(arr, tar, low, mid - 1);
+        } else {
+            return helper(arr, tar, mid + 1, high);
+        }
+    }
+
+    public static int binary(int[] arr, int tar) {
+        int n = arr.length;
+        return helper(arr, tar, 0, n - 1);
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        int tar = 40;
+        System.out.println(binary(arr, tar));
+    }
+}
