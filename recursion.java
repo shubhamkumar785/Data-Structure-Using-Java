@@ -239,3 +239,23 @@ public class recursion1 {
     }
 }
 
+
+
+// ------------------------------------------------------------------------------------------------------
+//                                     print reverse array using recursion 
+// ------------------------------------------------------------------------------------------------------
+
+public class recursion1 {
+    public static void printReverse(int[] arr, int i) {
+        if (i == arr.length)
+            return;
+        printReverse(arr, i + 1);
+        System.out.print(arr[i] + " ");
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        printReverse(arr, 0);
+    }
+}
+
