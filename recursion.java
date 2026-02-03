@@ -154,3 +154,54 @@ public class recursion1 {
         System.out.println(power(n, k));
     }
 }
+
+
+
+
+// ------------------------------------------------------------------------------------------------------
+//                         another way Greatest Common Divisor of 2 number
+// ------------------------------------------------------------------------------------------------------
+
+// public class recursion1 {
+//     public static int gcd(int a, int b) {
+//         if (a == 0) {
+//             return b;
+//         }
+//         return gcd(b % a, a);
+//     }
+
+//     public static void main(String[] args) {
+//         int a = 29;
+//         int b = 41;
+//         System.out.println(gcd(a, b));
+//     }
+// }
+
+// ------------------------------------------------------------------------------------------------------
+//                                     nth fibinacci number
+// ------------------------------------------------------------------------------------------------------
+
+// public class recursion1 {
+//     public static int nthFibonacci(int n) {
+//         if (n == 0) {
+//             return 0;
+//         } else if (n == 1) {
+//             return 1;
+//         } else {
+//             return nthFibonacci(n - 1) + nthFibonacci(n - 2);
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         int n = 5;
+//         System.out.print(nthFibonacci(n));
+//     }
+// }
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------
+//                                     
+// ------------------------------------------------------------------------------------------------------
