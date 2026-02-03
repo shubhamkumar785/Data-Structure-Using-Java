@@ -259,3 +259,29 @@ public class recursion1 {
     }
 }
 
+
+
+
+
+// ------------------------------------------------------------------------------------------------------
+//                                print trur if number exist in array
+// ------------------------------------------------------------------------------------------------------
+
+public class recursion1 {
+    public static boolean exist(int[] arr, int ele, int idx) {
+        if (idx == arr.length) {
+            return false;
+        }
+        if (arr[idx] == ele) {
+            return true;
+        }
+        return exist(arr, ele, idx + 1);
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        int ele = 30;
+        System.out.println(exist(arr, ele, 0));
+    }
+}
+
