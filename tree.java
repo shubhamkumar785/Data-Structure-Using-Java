@@ -307,3 +307,48 @@ public class tree {
         System.out.println(product(a));
     }
 }
+
+
+
+
+
+// ------------------------------------------------------------------------------------------
+//                                maximum value in a binary tree
+// ------------------------------------------------------------------------------------------
+
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class tree {
+
+    public static int maximum(Node root) {
+        if (root == null)
+            return Integer.MIN_VALUE;
+        return Math.max(root.data, Math.max(maximum(root.left), maximum(root.right)));
+    }
+
+    public static void main(String[] args) {
+        Node a = new Node(10);
+        Node b = new Node(20);
+        Node c = new Node(30);
+        Node d = new Node(40);
+        Node e = new Node(50);
+        Node f = new Node(60);
+
+        a.left = b;
+        a.right = c;
+        b.left = d;
+        b.right = e;
+        c.left = f;
+
+        System.out.println(maximum(a));
+    }
+}
+
