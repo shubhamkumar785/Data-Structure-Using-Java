@@ -265,3 +265,45 @@ public class tree {
         System.out.println(sum(a));
     }
 }
+
+
+
+
+// ------------------------------------------------------------------------------------------
+//                                product value of a binary tree
+// ------------------------------------------------------------------------------------------
+
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class tree {
+    public static int product(Node root) {
+        if (root == null)
+            return 1;
+        return root.data * product(root.left) * product(root.right);
+    }
+
+    public static void main(String[] args) {
+        Node a = new Node(10);
+        Node b = new Node(20);
+        Node c = new Node(30);
+        Node d = new Node(40);
+        Node e = new Node(50);
+        Node f = new Node(60);
+
+        a.left = b;
+        a.right = c;
+        b.left = d;
+        b.right = e;
+        c.left = f;
+
+        System.out.println(product(a));
+    }
+}
