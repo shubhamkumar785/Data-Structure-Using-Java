@@ -4,18 +4,18 @@ This repository contains implementations of **Data Structures and Algorithms usi
 Currently, only a **few basic concepts** have been implemented. More topics and optimized solutions will be added **gradually in the coming days**.
 
 ## Implemented So Far
-- Arrays  
+- Arrays
+- Strings
+- Tree
 - ArrayList  
 - Binary Search  
 - Bitwise Operations  
 
 ## Upcoming Implementations
-The following topics will be added soon:
-- Strings  
+The following topics will be added soon:  
 - Linked List  
 - Stack  
-- Queue  
-- Trees  
+- Queue
 - Sorting Algorithms  
 - Searching Algorithms  
 - Practice Problems for Interviews & Competitive Programming  
