@@ -42,3 +42,95 @@ public class tree {
 
     }
 }
+
+
+
+
+
+// ------------------------------------------------------------------------------------------
+//                                PreOrder traversal Binary Treee
+// ------------------------------------------------------------------------------------------
+
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class tree {
+    public static void preOrderDisplay(Node root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.data + " ");
+        preOrderDisplay(root.left);
+        preOrderDisplay(root.right);
+    }
+
+    public static void main(String[] args) {
+        Node a = new Node(10);
+        Node b = new Node(20);
+        Node c = new Node(30);
+        Node d = new Node(40);
+        Node e = new Node(50);
+
+        a.left = b;
+        a.right = c;
+        b.left = d;
+        b.right = e;
+
+        preOrderDisplay(a);
+
+    }
+}
+
+
+
+
+
+// ------------------------------------------------------------------------------------------
+//                                Inorder traversal Binary Treee
+// ------------------------------------------------------------------------------------------
+
+
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class tree {
+    public static void inOrderDisplay(Node root) {
+        if(root == null){
+            return;
+        }
+        inOrderDisplay(root.left);
+        System.out.print(root.data + " ");
+        inOrderDisplay(root.right);
+    }
+
+    public static void main(String[] args) {
+        Node a = new Node(10);
+        Node b = new Node(20);
+        Node c = new Node(30);
+        Node d = new Node(40);
+        Node e = new Node(50);
+
+        a.left = b;
+        a.right = c;
+        b.left = d;
+        b.right = e;
+
+        inOrderDisplay(a);
+
+    }
+}
+
