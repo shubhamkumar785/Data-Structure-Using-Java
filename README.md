@@ -27,7 +27,7 @@ The following topics will be added soon:
 
 ## Tech Stack
 - **Language:** Java  
-- **IDE:** VS Code / IntelliJ / NetBeans  
+- **IDE:** VS Code / Eclipse / NetBeans  
 
 ## Status
 🚧 **Work in Progress**  
