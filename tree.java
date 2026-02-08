@@ -455,3 +455,65 @@ public class tree {
         display(a);
     }
 }
+
+
+
+
+
+// ------------------------------------------------------------------------------------------
+//                           identical binary tree / same tree
+// ------------------------------------------------------------------------------------------
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class tree {
+
+    public static void display(Node root) {
+        if (root == null)
+            return;
+
+        display(root.left);
+        System.out.print(root.data + " ");
+        display(root.right);
+    }
+
+    public static boolean identical(Node root1, Node root2) {
+        if (root1 == null && root2 == null) {
+            return true;
+        }
+        if (root1 == null || root2 == null) {
+            return false;
+        }
+        if (root1.data != root2.data) {
+            return false;
+        }
+        return identical(root1.left, root2.right) && identical(root1.right, root2.right);
+    }
+
+    public static void main(String[] args) {
+
+        Node a1 = new Node(10);
+        Node b1 = new Node(20);
+        Node c1 = new Node(30);
+
+        a1.left = b1;
+        a1.right = c1;
+
+        // Tree 2
+        Node a2 = new Node(10);
+        Node b2 = new Node(20);
+        Node c2 = new Node(30);
+
+        a2.left = b2;
+        a2.right = c2;
+
+        System.out.println(identical(a1, a2));
+    }
+}
