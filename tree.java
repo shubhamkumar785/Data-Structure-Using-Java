@@ -847,3 +847,47 @@ public class tree1 {
     }
 }
 
+
+
+// ------------------------------------------------------------------------------------------
+//                                 path sum
+// ------------------------------------------------------------------------------------------
+
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class tree1 {
+    public static boolean hasPathSum(Node root, int targetSum) {
+        if(root == null){
+            if(targetSum == 0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        return hasPathSum(root.left, targetSum - root.data) || hasPathSum(root.right, targetSum - root.data);
+    }
+
+    public static void main(String[] args) {
+
+        Node a = new Node(1);
+        Node b = new Node(2);
+        Node c = new Node(3);
+
+        a.left = b;
+        a.right = c;
+
+        int targetSum = 5;
+
+        System.out.println();
+
+    }
+}
