@@ -953,12 +953,90 @@
 
 
 
-// kth missing positive number in a sorted array
+/*
+find the position(0-based indexing) at which k is present in the array using binary search. If k doesn't exist in arr[] return -1. (If multiple occurrences are there, please return the smallest index.)
 
+public class bs {
+    public static int search(int[] arr, int target) {
+        int low = 0, high = arr.length;
+        int firstOccurence = -1;
+        while (low < high) {
+            int mid = low + (high - low) / 2;
+            if (arr[mid] == target) {
+                high = mid - 1;
+                firstOccurence = high;
 
+            } else if (arr[mid] > target) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return firstOccurence;
+    }
 
-public class BinarySearch {
-    public static void main(stringpractice[] args) {
-        int[] arr = {};
+    public static void main(String[] args) {
+        int[] arr = { 10, 20, 30, 30, 40, 30, 50 };
+        int target = 30;
+        System.out.println(search(arr, target));
     }
 }
+
+ */
+
+/*
+
+first and last occurrence of sorted array.(arr = [10 10 10 10 11 12 12 14 14], target = 13)
+
+
+
+import java.util.*;
+
+public class bs {
+    public static void firstAndLast(int[] arr, int target) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        int low = 0, high = arr.length - 1;
+        int first = -1, second = -1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (arr[mid] == target) {
+                first = mid;
+                high = mid - 1;
+            } else if (arr[mid] > target) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        list.add(first);
+
+        low = 0;
+        high = arr.length - 1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (arr[mid] == target) {
+                second = mid;
+                low = mid + 1;
+            } else if (arr[mid] > target) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        list.add(second);
+        System.out.println(list);
+
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 10, 10, 10, 10, 11, 12, 12, 12, 14, 14 };
+        int target = 12;
+        firstAndLast(arr, target);
+    }
+}
+
+
+ */
