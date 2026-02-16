@@ -1074,3 +1074,33 @@ public class bs {
     }
 }
 
+
+
+
+
+/* 
+floor square root
+
+*/
+
+public class bs {
+    public static int floorSquare(int n) {
+        int root = 0;
+        int i = 0;
+        while (i <= n) {
+            if (i * i > n) {
+                break;
+            }
+            root = i;
+            i++;
+        }
+        return root;
+    }
+
+    public static void main(String[] args) {
+        int n = 11;
+        System.out.println(floorSquare(n));
+    }
+}
+
+
