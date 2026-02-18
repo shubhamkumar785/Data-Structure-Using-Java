@@ -1151,3 +1151,39 @@ public class Arrays {
 
     }
 }
+
+aimport java.util.*;
+
+public class Arrays {
+    public static int[] pivotArray(int[] arr, int pivot) {
+
+        int n = arr.length;
+        int[] result = new int[n];
+
+        int index = 0;
+        for (int num : arr) {
+            if (num < pivot) {
+                result[index++] = num;
+            }
+            if (num == pivot) {
+                result[index++] = num;
+            }
+        }
+        for (int num : arr) {
+            if (num > pivot) {
+                result[index++] = num;
+            }
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 9, 12, 5, 10, 14, 3, 10 };
+        int pivot = 10;
+
+        int[] result = pivotArray(arr, pivot);
+
+        System.out.println(Arrays.toString(result));
+
+    }
+}
