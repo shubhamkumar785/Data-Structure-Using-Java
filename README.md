@@ -7,6 +7,7 @@ Currently, only a **few basic concepts** have been implemented. More topics and 
 - Arrays
 - Strings
 - Tree
+- Sorting Algorithms  
 - ArrayList  
 - Binary Search  
 - Bitwise Operations  
@@ -16,7 +17,6 @@ The following topics will be added soon:
 - Linked List  
 - Stack  
 - Queue
-- Sorting Algorithms  
 - Searching Algorithms  
 - Practice Problems for Interviews & Competitive Programming  
 
