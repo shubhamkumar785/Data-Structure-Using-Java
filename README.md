@@ -7,7 +7,7 @@ Currently, only a **few basic concepts** have been implemented. More topics and 
 - Arrays
 - Strings
 - Tree
-- Sorting Algorithms  
+- Sorting Algorithms (Bubble, Selection, Insertion, Merge) 
 - ArrayList  
 - Binary Search  
 - Bitwise Operations  
