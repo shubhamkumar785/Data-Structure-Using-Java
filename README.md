@@ -10,7 +10,8 @@ Currently, only a **few basic concepts** have been implemented. More topics and 
 - Sorting Algorithms (Bubble, Selection, Insertion, Merge) 
 - ArrayList  
 - Binary Search  
-- Bitwise Operations  
+- Bitwise Operations
+- Bit Manipulation
 
 ## Upcoming Implementations
 The following topics will be added soon:  
