@@ -1049,7 +1049,7 @@ public class bs {
 
 */
 
-public class bs {
+public class BinarySearch {
     public static int floor(int[] arr, int x) {
         int low = 0, high = arr.length;
         int idx = -1;
@@ -1083,24 +1083,24 @@ floor square root
 
 */
 
-public class bs {
-    public static int floorSquare(int n) {
-        int root = 0;
-        int i = 0;
-        while (i <= n) {
-            if (i * i > n) {
-                break;
-            }
-            root = i;
-            i++;
-        }
-        return root;
-    }
+// public class BinarySearch {
+//     public static int floorSquare(int n) {
+//         int root = 0;
+//         int i = 0;
+//         while (i <= n) {
+//             if (i * i > n) {
+//                 break;
+//             }
+//             root = i;
+//             i++;
+//         }
+//         return root;
+//     }
 
-    public static void main(String[] args) {
-        int n = 11;
-        System.out.println(floorSquare(n));
-    }
-}
+//     public static void main(String[] args) {
+//         int n = 11;
+//         System.out.println(floorSquare(n));
+//     }
+// }
 
 

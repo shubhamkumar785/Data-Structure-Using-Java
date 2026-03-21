@@ -1,658 +1,658 @@
 
-// ------------------------------------------------------------------------------------------
-//                                Display Binary Treee
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                Display Binary Treee
+// // ------------------------------------------------------------------------------------------
 
-class Node {
-    int val;
-    Node left;
-    Node right;
+// class Node {
+//     int val;
+//     Node left;
+//     Node right;
 
-    Node(int val) {
-        this.val = val;
-    }
-}
-
-public class tree {
-    public static void display(Node root) {
-        if (root == null)
-            return;
-        System.out.print(root.val + " -> ");
-        display(root.left);
-        display(root.right);
-    }
-
-    public static void main(String[] args) {
-        Node a = new Node(10);
-        Node b = new Node(3);
-        Node c = new Node(5);
-        Node d = new Node(1);
-        Node e = new Node(2);
-        Node f = new Node(4);
-        Node g = new Node(7);
-
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
-        c.left = f;
-        c.right = g;
+//     Node(int val) {
+//         this.val = val;
+//     }
+// }
+
+// public class tree {
+//     public static void display(Node root) {
+//         if (root == null)
+//             return;
+//         System.out.print(root.val + " -> ");
+//         display(root.left);
+//         display(root.right);
+//     }
+
+//     public static void main(String[] args) {
+//         Node a = new Node(10);
+//         Node b = new Node(3);
+//         Node c = new Node(5);
+//         Node d = new Node(1);
+//         Node e = new Node(2);
+//         Node f = new Node(4);
+//         Node g = new Node(7);
+
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
+//         c.left = f;
+//         c.right = g;
 
-        display(a);
+//         display(a);
 
-    }
-}
+//     }
+// }
 
 
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                PreOrder traversal Binary Treee
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                PreOrder traversal Binary Treee
+// // ------------------------------------------------------------------------------------------
 
-class Node {
-    int data;
-    Node left;
-    Node right;
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
-
-public class tree {
-    public static void preOrderDisplay(Node root) {
-        if (root == null) {
-            return;
-        }
-        System.out.print(root.data + " ");
-        preOrderDisplay(root.left);
-        preOrderDisplay(root.right);
-    }
-
-    public static void main(String[] args) {
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
-
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
+
+// public class tree {
+//     public static void preOrderDisplay(Node root) {
+//         if (root == null) {
+//             return;
+//         }
+//         System.out.print(root.data + " ");
+//         preOrderDisplay(root.left);
+//         preOrderDisplay(root.right);
+//     }
+
+//     public static void main(String[] args) {
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
+
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
 
-        preOrderDisplay(a);
+//         preOrderDisplay(a);
 
-    }
-}
+//     }
+// }
 
 
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                Inorder traversal Binary Treee
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                Inorder traversal Binary Treee
+// // ------------------------------------------------------------------------------------------
 
 
-class Node {
-    int data;
-    Node left;
-    Node right;
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree {
-    public static void inOrderDisplay(Node root) {
-        if(root == null){
-            return;
-        }
-        inOrderDisplay(root.left);
-        System.out.print(root.data + " ");
-        inOrderDisplay(root.right);
-    }
-
-    public static void main(String[] args) {
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
+// public class tree {
+//     public static void inOrderDisplay(Node root) {
+//         if(root == null){
+//             return;
+//         }
+//         inOrderDisplay(root.left);
+//         System.out.print(root.data + " ");
+//         inOrderDisplay(root.right);
+//     }
+
+//     public static void main(String[] args) {
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
 
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
 
-        inOrderDisplay(a);
+//         inOrderDisplay(a);
 
-    }
-}
+//     }
+// }
 
 
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                postorder traversal Binary Treee
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                postorder traversal Binary Treee
+// // ------------------------------------------------------------------------------------------
 
-class Node {
-    int data;
-    Node left;
-    Node right;
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree {
-    public static void postOrderDisplay(Node root) {
-        if (root == null) {
-            return;
-        }
-        postOrderDisplay(root.left);
-        postOrderDisplay(root.right);
-        System.out.print(root.data + " ");
-    }
-
-    public static void main(String[] args) {
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
+// public class tree {
+//     public static void postOrderDisplay(Node root) {
+//         if (root == null) {
+//             return;
+//         }
+//         postOrderDisplay(root.left);
+//         postOrderDisplay(root.right);
+//         System.out.print(root.data + " ");
+//     }
+
+//     public static void main(String[] args) {
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
 
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
 
-        postOrderDisplay(a);
+//         postOrderDisplay(a);
 
-    }
-}
+//     }
+// }
 
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                postorder traversal Binary Treee
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                postorder traversal Binary Treee
+// // ------------------------------------------------------------------------------------------
 
-class Node {
-    int data;
-    Node left;
-    Node right;
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree {
-
-    public static int size(Node root) {
-        if (root == null)
-            return 0;
-        return 1 + size(root.left) + size(root.right);
-    }
-
-    public static void main(String[] args) {
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
-        Node f = new Node(60);
+// public class tree {
+
+//     public static int size(Node root) {
+//         if (root == null)
+//             return 0;
+//         return 1 + size(root.left) + size(root.right);
+//     }
+
+//     public static void main(String[] args) {
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
+//         Node f = new Node(60);
 
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
-        c.left = f;
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
+//         c.left = f;
 
-        System.out.println(size(a));
-    }
-}
+//         System.out.println(size(a));
+//     }
+// }
 
 
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                sum of all node Binary Treee
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                sum of all node Binary Treee
+// // ------------------------------------------------------------------------------------------
 
-class Node {
-    int data;
-    Node left;
-    Node right;
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree {
+// public class tree {
 
-    public static int sum(Node root) {
-        if (root == null)
-            return 0;
-        return root.data + sum(root.left) + sum(root.right);
-    }
+//     public static int sum(Node root) {
+//         if (root == null)
+//             return 0;
+//         return root.data + sum(root.left) + sum(root.right);
+//     }
 
-    public static void main(String[] args) {
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
-        Node f = new Node(60);
+//     public static void main(String[] args) {
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
+//         Node f = new Node(60);
 
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
-        c.left = f;
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
+//         c.left = f;
 
-        System.out.println(sum(a));
-    }
-}
+//         System.out.println(sum(a));
+//     }
+// }
 
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                product value of a binary tree
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                product value of a binary tree
+// // ------------------------------------------------------------------------------------------
 
-class Node {
-    int data;
-    Node left;
-    Node right;
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
-
-public class tree {
-    public static int product(Node root) {
-        if (root == null)
-            return 1;
-        return root.data * product(root.left) * product(root.right);
-    }
-
-    public static void main(String[] args) {
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
-        Node f = new Node(60);
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
+
+// public class tree {
+//     public static int product(Node root) {
+//         if (root == null)
+//             return 1;
+//         return root.data * product(root.left) * product(root.right);
+//     }
+
+//     public static void main(String[] args) {
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
+//         Node f = new Node(60);
 
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
-        c.left = f;
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
+//         c.left = f;
 
-        System.out.println(product(a));
-    }
-}
+//         System.out.println(product(a));
+//     }
+// }
 
-
-
+
+
 
 
-// ------------------------------------------------------------------------------------------
-//                                maximum value in a binary tree
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                maximum value in a binary tree
+// // ------------------------------------------------------------------------------------------
 
-class Node {
-    int data;
-    Node left;
-    Node right;
-
-    Node(int data) {
-        this.data = data;
-    }
-}
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
+
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree {
+// public class tree {
 
-    public static int maximum(Node root) {
-        if (root == null)
-            return Integer.MIN_VALUE;
-        return Math.max(root.data, Math.max(maximum(root.left), maximum(root.right)));
-    }
+//     public static int maximum(Node root) {
+//         if (root == null)
+//             return Integer.MIN_VALUE;
+//         return Math.max(root.data, Math.max(maximum(root.left), maximum(root.right)));
+//     }
 
-    public static void main(String[] args) {
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
-        Node f = new Node(60);
+//     public static void main(String[] args) {
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
+//         Node f = new Node(60);
 
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
-        c.left = f;
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
+//         c.left = f;
 
-        System.out.println(maximum(a));
-    }
-}
+//         System.out.println(maximum(a));
+//     }
+// }
 
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                level of a binary tree
-// ------------------------------------------------------------------------------------------
-class Node {
-    int data;
-    Node left;
-    Node right;
+// // ------------------------------------------------------------------------------------------
+// //                                level of a binary tree
+// // ------------------------------------------------------------------------------------------
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree {
-    public static int level(Node root) {
-        if (root == null) {
-            return 0;
-        }
-        return 1 + Math.max(level(root.left), level(root.right));
-    }
+// public class tree {
+//     public static int level(Node root) {
+//         if (root == null) {
+//             return 0;
+//         }
+//         return 1 + Math.max(level(root.left), level(root.right));
+//     }
 
-    public static void main(String[] args) {
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
-        Node f = new Node(60);
+//     public static void main(String[] args) {
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
+//         Node f = new Node(60);
 
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
-        c.left = f;
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
+//         c.left = f;
 
-        System.out.println(level(a));
-    }
-}
+//         System.out.println(level(a));
+//     }
+// }
 
 
 
-
-// ------------------------------------------------------------------------------------------
-//                                invert of a binary tree
-// ------------------------------------------------------------------------------------------
-class Node {
-    int data;
-    Node left;
-    Node right;
+
+// // ------------------------------------------------------------------------------------------
+// //                                invert of a binary tree
+// // ------------------------------------------------------------------------------------------
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree {
+// public class tree {
 
-    public static void display(Node root) {
-        if (root == null)
-            return;
+//     public static void display(Node root) {
+//         if (root == null)
+//             return;
 
-        display(root.left);
-        System.out.print(root.data + " ");
-        display(root.right);
-    }
+//         display(root.left);
+//         System.out.print(root.data + " ");
+//         display(root.right);
+//     }
 
-    public static void invert(Node root) {
-        if (root == null)
-            return;
+//     public static void invert(Node root) {
+//         if (root == null)
+//             return;
 
-        Node temp = root.left;
-        root.left = root.right;
-        root.right = temp;
+//         Node temp = root.left;
+//         root.left = root.right;
+//         root.right = temp;
 
-        invert(root.left);
-        invert(root.right);
-    }
+//         invert(root.left);
+//         invert(root.right);
+//     }
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
 
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        c.left = e;
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         c.left = e;
 
-        System.out.println("Original Tree:");
-        display(a);
+//         System.out.println("Original Tree:");
+//         display(a);
 
-        invert(a);
+//         invert(a);
 
-        System.out.println("\nInverted Tree:");
-        display(a);
-    }
-}
+//         System.out.println("\nInverted Tree:");
+//         display(a);
+//     }
+// }
 
 
 
 
 
-// ------------------------------------------------------------------------------------------
-//                           identical binary tree / same tree
-// ------------------------------------------------------------------------------------------
-class Node {
-    int data;
-    Node left;
-    Node right;
+// // ------------------------------------------------------------------------------------------
+// //                           identical binary tree / same tree
+// // ------------------------------------------------------------------------------------------
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree {
+// public class tree {
 
-    public static void display(Node root) {
-        if (root == null)
-            return;
+//     public static void display(Node root) {
+//         if (root == null)
+//             return;
 
-        display(root.left);
-        System.out.print(root.data + " ");
-        display(root.right);
-    }
+//         display(root.left);
+//         System.out.print(root.data + " ");
+//         display(root.right);
+//     }
 
-    public static boolean identical(Node root1, Node root2) {
-        if (root1 == null && root2 == null) {
-            return true;
-        }
-        if (root1 == null || root2 == null) {
-            return false;
-        }
-        if (root1.data != root2.data) {
-            return false;
-        }
-        return identical(root1.left, root2.right) && identical(root1.right, root2.right);
-    }
+//     public static boolean identical(Node root1, Node root2) {
+//         if (root1 == null && root2 == null) {
+//             return true;
+//         }
+//         if (root1 == null || root2 == null) {
+//             return false;
+//         }
+//         if (root1.data != root2.data) {
+//             return false;
+//         }
+//         return identical(root1.left, root2.right) && identical(root1.right, root2.right);
+//     }
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        Node a1 = new Node(10);
-        Node b1 = new Node(20);
-        Node c1 = new Node(30);
+//         Node a1 = new Node(10);
+//         Node b1 = new Node(20);
+//         Node c1 = new Node(30);
 
-        a1.left = b1;
-        a1.right = c1;
+//         a1.left = b1;
+//         a1.right = c1;
 
-        // Tree 2
-        Node a2 = new Node(10);
-        Node b2 = new Node(20);
-        Node c2 = new Node(30);
+//         // Tree 2
+//         Node a2 = new Node(10);
+//         Node b2 = new Node(20);
+//         Node c2 = new Node(30);
 
-        a2.left = b2;
-        a2.right = c2;
+//         a2.left = b2;
+//         a2.right = c2;
 
-        System.out.println(identical(a1, a2));
-    }
-}
+//         System.out.println(identical(a1, a2));
+//     }
+// }
 
 
-// ------------------------------------------------------------------------------------------
-//                                 DFS - Preorder
-// ------------------------------------------------------------------------------------------
-class Node {
-   int data;
-   Node left;
-   Node right;
+// // ------------------------------------------------------------------------------------------
+// //                                 DFS - Preorder
+// // ------------------------------------------------------------------------------------------
+// class Node {
+//    int data;
+//    Node left;
+//    Node right;
 
-   Node(int data) {
-       this.data = data;
-   }
-}
+//    Node(int data) {
+//        this.data = data;
+//    }
+// }
 
-public class tree {
+// public class tree {
 
-   public static void display(Node root) {
-       if (root == null)
-           return;
+//    public static void display(Node root) {
+//        if (root == null)
+//            return;
 
-       System.out.print(root.data + " ");
-       display(root.left);
-       display(root.right);
-   }
+//        System.out.print(root.data + " ");
+//        display(root.left);
+//        display(root.right);
+//    }
 
-   public static void main(String[] args) {
+//    public static void main(String[] args) {
 
-       Node a = new Node(10);
-       Node b = new Node(20);
-       Node c = new Node(30);
-       Node d = new Node(40);
-       Node e = new Node(50);
+//        Node a = new Node(10);
+//        Node b = new Node(20);
+//        Node c = new Node(30);
+//        Node d = new Node(40);
+//        Node e = new Node(50);
 
-       a.left = b;
-       a.right = c;
-       b.left = d;
-       b.right = e;
+//        a.left = b;
+//        a.right = c;
+//        b.left = d;
+//        b.right = e;
 
-       display(a);
-   }
-}
+//        display(a);
+//    }
+// }
 
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                 DFS - Inorder
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                 DFS - Inorder
+// // ------------------------------------------------------------------------------------------
 
 
-class Node {
-    int data;
-    Node left;
-    Node right;
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree {
+// public class tree {
 
-    public static void display(Node root) {
-        if (root == null)
-            return;
+//     public static void display(Node root) {
+//         if (root == null)
+//             return;
 
-        display(root.left);
-        System.out.print(root.data + " ");
-        display(root.right);
-    }
+//         display(root.left);
+//         System.out.print(root.data + " ");
+//         display(root.right);
+//     }
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
 
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
 
-        display(a);
-    }
-}
+//         display(a);
+//     }
+// }
 
 
 
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                 DFS - PostOrder
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                 DFS - PostOrder
+// // ------------------------------------------------------------------------------------------
 
 
-class Node {
-    int data;
-    Node left;
-    Node right;
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree {
+// public class tree {
 
-    public static void display(Node root) {
-        if (root == null)
-            return;
+//     public static void display(Node root) {
+//         if (root == null)
+//             return;
 
-        display(root.left);
-        display(root.right);
-        System.out.print(root.data + " ");
-    }
+//         display(root.left);
+//         display(root.right);
+//         System.out.print(root.data + " ");
+//     }
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
 
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
 
-        display(a);
-    }
-}
+//         display(a);
+//     }
+// }
 
 
 
@@ -660,46 +660,46 @@ public class tree {
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                 size of binary tree
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                 size of binary tree
+// // ------------------------------------------------------------------------------------------
 
 
-class Node {
-    int data;
-    Node left;
-    Node right;
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree {
+// public class tree {
 
-    public static int size(Node root) {
-    	if(root == null) {
-    		return 0;
-    	}
-    	return 1 + size(root.left) + size(root.right);
-    }
+//     public static int size(Node root) {
+//     	if(root == null) {
+//     		return 0;
+//     	}
+//     	return 1 + size(root.left) + size(root.right);
+//     }
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
 
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
 
-        System.out.println(size(a));
-    }
-}
+//         System.out.println(size(a));
+//     }
+// }
 
 
 
@@ -709,45 +709,45 @@ public class tree {
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                  Maximum node of binary tree
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                  Maximum node of binary tree
+// // ------------------------------------------------------------------------------------------
 
 
-class Node {
-    int data;
-    Node left;
-    Node right;
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree {
+// public class tree {
 
-    public static int min(Node root) {
-    	if(root  == null) {
-    		return 0;
-    	}
-    	return Math.max(root.data, Math.max(min(root.left), min(root.right)));
-    }
-    public static void main(String[] args) {
+//     public static int min(Node root) {
+//     	if(root  == null) {
+//     		return 0;
+//     	}
+//     	return Math.max(root.data, Math.max(min(root.left), min(root.right)));
+//     }
+//     public static void main(String[] args) {
 
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
 
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
 
-        System.out.println(min(a));
-    }
-}
+//         System.out.println(min(a));
+//     }
+// }
 
 
 
@@ -756,138 +756,138 @@ public class tree {
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                  sum of all node of binary tree
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                  sum of all node of binary tree
+// // ------------------------------------------------------------------------------------------
 
 
-class Node {
-    int data;
-    Node left;
-    Node right;
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree {
+// public class tree {
 
-    public static int sum(Node root) {
-    	if(root  == null) {
-    		return 0;
-    	}
-    	return root.data + sum(root.left) + sum(root.right);
-    }
-    public static void main(String[] args) {
+//     public static int sum(Node root) {
+//     	if(root  == null) {
+//     		return 0;
+//     	}
+//     	return root.data + sum(root.left) + sum(root.right);
+//     }
+//     public static void main(String[] args) {
 
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
+//         Node a = new Node(10);
+//         Node b = new Node(20);
+//         Node c = new Node(30);
+//         Node d = new Node(40);
+//         Node e = new Node(50);
 
-        a.left = b;
-        a.right = c;
-        b.left = d;
-        b.right = e;
+//         a.left = b;
+//         a.right = c;
+//         b.left = d;
+//         b.right = e;
 
-        System.out.println(sum(a));
-    }
-}
+//         System.out.println(sum(a));
+//     }
+// }
 
 
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                 symmetric binary tree
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                 symmetric binary tree
+// // ------------------------------------------------------------------------------------------
 
-class Node {
-    int data;
-    Node left;
-    Node right;
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree1 {
-    public static boolean isSymmetric(Node root) {
-        if (root == null)
-            return true;
-        return isMirror(root.left, root.right);
-    }
+// public class tree1 {
+//     public static boolean isSymmetric(Node root) {
+//         if (root == null)
+//             return true;
+//         return isMirror(root.left, root.right);
+//     }
 
-    public static boolean isMirror(Node left, Node right) {
-        if (left == null && right == null)
-            return true;
-        if (left == null || right == null)
-            return false;
-        if (left.data != right.data)
-            return false;
-        return isMirror(left.left, right.right) && isMirror(left.right, right.left);
-    }
+//     public static boolean isMirror(Node left, Node right) {
+//         if (left == null && right == null)
+//             return true;
+//         if (left == null || right == null)
+//             return false;
+//         if (left.data != right.data)
+//             return false;
+//         return isMirror(left.left, right.right) && isMirror(left.right, right.left);
+//     }
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        Node root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(2);
+//         Node root = new Node(1);
+//         root.left = new Node(2);
+//         root.right = new Node(2);
 
-        root.left.left = new Node(3);
-        root.left.right = new Node(4);
+//         root.left.left = new Node(3);
+//         root.left.right = new Node(4);
 
-        root.right.left = new Node(4);
-        root.right.right = new Node(3);
+//         root.right.left = new Node(4);
+//         root.right.right = new Node(3);
 
-        System.out.println(isSymmetric(root)); // true
-    }
-}
+//         System.out.println(isSymmetric(root)); // true
+//     }
+// }
 
 
 
-// ------------------------------------------------------------------------------------------
-//                                 path sum
-// ------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------
+// //                                 path sum
+// // ------------------------------------------------------------------------------------------
 
-class Node {
-    int data;
-    Node left;
-    Node right;
+// class Node {
+//     int data;
+//     Node left;
+//     Node right;
 
-    Node(int data) {
-        this.data = data;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 
-public class tree1 {
-    public static boolean hasPathSum(Node root, int targetSum) {
-        if(root == null){
-            if(targetSum == 0){
-                return true;
-            }
-            else{
-                return false;
-            }
-        }
-        return hasPathSum(root.left, targetSum - root.data) || hasPathSum(root.right, targetSum - root.data);
-    }
+// public class tree1 {
+//     public static boolean hasPathSum(Node root, int targetSum) {
+//         if(root == null){
+//             if(targetSum == 0){
+//                 return true;
+//             }
+//             else{
+//                 return false;
+//             }
+//         }
+//         return hasPathSum(root.left, targetSum - root.data) || hasPathSum(root.right, targetSum - root.data);
+//     }
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        Node a = new Node(1);
-        Node b = new Node(2);
-        Node c = new Node(3);
+//         Node a = new Node(1);
+//         Node b = new Node(2);
+//         Node c = new Node(3);
 
-        a.left = b;
-        a.right = c;
+//         a.left = b;
+//         a.right = c;
 
-        int targetSum = 5;
+//         int targetSum = 5;
 
-        System.out.println();
+//         System.out.println();
 
-    }
-}
+//     }
+// }

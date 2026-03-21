@@ -59,6 +59,11 @@ public class BitManipulation {
 question - single number
 */
 
+// Unmerged paths:
+//   (use "git restore --staged <file>..." to unstage)
+//   (use "git add <file>..." to mark resolution)
+//         both added:      recursion.java
+
 public class BitManipulation {
     public static int singleNumber(int[] arr) {
         int xor = 0;
