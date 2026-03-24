@@ -104,7 +104,6 @@ public class QueueCode {
                                      reverse first kth elements in a queue
 -------------------------------------------------------------------------------------------------------------------------
 
-*/
 
 public class QueueCode {
     public static Queue<Integer> reverseFirstK(Queue<Integer> queue, int k) {
@@ -133,5 +132,35 @@ public class QueueCode {
         int k = 3;
 
         System.out.println(reverseFirstK(queue, k));
+    }
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------
+                                     reverse first kth elements in a queue
+-------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+public class QueueCode {
+    public static int findTheWinner(int n, int k){
+        Queue<Integer> queue = new LinkedList<>();
+
+        for(int i=1; i<=n; i++){
+            queue.add(i);
+        }
+        while(queue.size() > 1){
+            for(int i=1; i<= k-1; i++){
+                queue.add(queue.remove());
+            }
+            queue.remove();
+        }
+        return queue.peek();
+    }
+    public static void main(String[] args){
+        int n = 11;
+        int k = 4;
+
+        System.out.println(findTheWinner(n, k));
     }
 }
