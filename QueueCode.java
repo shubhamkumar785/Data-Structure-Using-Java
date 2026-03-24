@@ -1,5 +1,5 @@
 import java.util.*;
-
+/* 
 public class QueueCode {
 
     // Traverse a data
@@ -66,5 +66,72 @@ public class QueueCode {
 
         peekElement(queue);      // print front
 
+    }
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------
+                                     reverse a elements in a queue
+-------------------------------------------------------------------------------------------------------------------------
+
+
+public class QueueCode {
+
+    public static Queue<Integer> firstKthElements(Queue<Integer> queue){
+        Stack<Integer> st = new Stack<>();
+        while(queue.size() > 0){
+            st.push(queue.remove());
+        }
+        while(st.size() > 0){
+            queue.add(st.pop());
+        }
+        return queue;
+
+    }
+    public static void main(String[] args){
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(10);
+        queue.add(20);
+        queue.add(30);
+        queue.add(40);
+        queue.add(50);
+
+        System.out.println(firstKthElements(queue));
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------
+                                     reverse first kth elements in a queue
+-------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+public class QueueCode {
+    public static Queue<Integer> reverseFirstK(Queue<Integer> queue, int k) {
+        Stack<Integer> st = new Stack<>();
+        int n = queue.size();
+
+        for(int i=0; i<k; i++){
+            st.push(queue.remove());
+        }
+        while(st.size() > 0){
+            queue.add(st.pop());
+        }
+        for(int i=0; i<n-k; i++){
+            queue.add(queue.remove());
+        }
+        return queue;
+    }
+    public static void main(String[] args){
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(10);
+        queue.add(20);
+        queue.add(30);
+        queue.add(40);
+        queue.add(50);
+
+        int k = 3;
+
+        System.out.println(reverseFirstK(queue, k));
     }
 }
