@@ -12,12 +12,12 @@ Currently, only a **few basic concepts** have been implemented. More topics and 
 - Binary Search  
 - Bitwise Operations
 - Bit Manipulation
+- Queue
 
 ## Upcoming Implementations
 The following topics will be added soon:  
 - Linked List  
 - Stack  
-- Queue
 - Searching Algorithms  
 - Practice Problems for Interviews & Competitive Programming  
 
