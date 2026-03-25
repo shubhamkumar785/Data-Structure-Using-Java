@@ -137,10 +137,9 @@ public class QueueCode {
 
 
 -------------------------------------------------------------------------------------------------------------------------
-                                     reverse first kth elements in a queue
+                                     find the winner of the circular game
 -------------------------------------------------------------------------------------------------------------------------
 
-*/
 
 public class QueueCode {
     public static int findTheWinner(int n, int k){
@@ -162,5 +161,70 @@ public class QueueCode {
         int k = 4;
 
         System.out.println(findTheWinner(n, k));
+    }
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------
+                                    Queue implementation by linked list
+-------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+class Node {
+    int value;
+    Node next;
+
+    Node(int value){
+        this.value = value;
+    }
+}
+public class QueueCode {
+    Node head;
+    Node tail;
+    int size;
+    
+    public int remove(){
+        if(size == 0){
+            System.out.println("Queue is Empty!");
+            return;
+        }
+        int removed = head.value;
+        head = head.next;
+        size--;
+        return removed;
+    }
+
+    public void add(int value){
+        Node temp = new Node(value);
+        if(tail == null){
+            head = tail = temp;
+        }
+        else{
+            tail.next = temp;
+            tail = temp;
+        }
+        size++;
+    }
+
+    public void display(){
+        Node temp = head;
+        while(temp != null){
+            System.out.print(temp.value + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+    public static void main(String[] args){
+        QueueCode queue = new QueueCode();
+        queue.add(10);
+        queue.add(20);
+        queue.add(30);
+
+        queue.display();
+
+        queue.remove();
+
+        queue.display();
     }
 }
