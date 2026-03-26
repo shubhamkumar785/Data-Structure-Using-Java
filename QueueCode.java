@@ -1,4 +1,3 @@
-import java.util.*;
 /* 
 public class QueueCode {
 
@@ -187,7 +186,7 @@ public class QueueCode {
     public int remove(){
         if(size == 0){
             System.out.println("Queue is Empty!");
-            return;
+            return -1;
         }
         int removed = head.value;
         head = head.next;
