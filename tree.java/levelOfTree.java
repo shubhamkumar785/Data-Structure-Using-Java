@@ -9,21 +9,12 @@ class Node {
     }
 }
 
-public class balancedBinaryTree {
-    public static boolean isBalanced(Node root) {
-        int leftLevel = level(root.left);
-        int rightLevel = level(root.right);
-
-        if (Math.abs(leftLevel - rightLevel) > 1) {
-            return false;
-        }
-        return isBalanced(root.left) && isBalanced(root.right);
-    }
+public class levelOfTree {
 
     public static int level(Node root) {
-        if (root == null) {
+        if (root == null)
             return 0;
-        }
+
         return 1 + Math.max(level(root.left), level(root.right));
     }
 
@@ -38,6 +29,8 @@ public class balancedBinaryTree {
         a.right = c;
         b.right = d;
         c.left = e;
+
+        System.out.println(level(a));
 
     }
 }
